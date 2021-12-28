@@ -1,263 +1,208 @@
 @charset "UTF-8";
 /* oocss  */
 
-
 html {
   font-size: 100%;
 }
 
 body {
+  background-color: #e6e2d7;
   color: #000;
-  padding: 0;
-  margin: 0;
-  font-family: serif;
+  font-family: 'Noto Serif JP', serif;
 }
 
-h1,h2,p {
-  margin: 0;
+a {
+  color: #fff;
+  text-decoration: none;
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
   vertical-align: bottom;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
 }
 
 li {
   list-style: none;
 }
 
-a {
-  color: #000;
-  text-decoration: none;
+.wrapper {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
-
-main {
-  background-color: #fff5ee;
-  padding: 180px 0 250px;
-}
-
 
 /* top  */
 #header {
-  position: relative;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.top-img {
+  width: 100%;
   height: 100vh;
   background-image: url(https://placehold.jp/2000x2000.png);
-  background-position: center;
+  background-position: center top;
   background-size: cover;
-}
-
-.vertical-writhing {
-  display: inline-block;
-  text-align: left;
+  background-repeat: no-repeat;
+  padding: 60px 80px;
+  margin-bottom: 180px;
+  position: relative;
   writing-mode: vertical-rl;
+  -webkit-writhing-mode: vertical-rl;
+  -moz-writhing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
 }
 
-#header .top-img .vertical-writhing {
-  margin-top: 60px;
-  margin-right: 68px;
+.site-title {
+  margin-left: 60px;
+  line-height: 1px;
 }
 
-.site-logo {
-  font-size: 2.6rem;
-  letter-spacing: 0.7rem;
-  margin-left: 48px;
-}
-
-.site-logo a {
-  color: #fff;
-}
-
-.top-img .vertical-writhing ul li {
-  margin-right: 25px;
-}
-
-.top-img .vertical-writhing ul li:first-child {
-  margin-right: 0;
-}
-
-.top-img .vertical-writhing ul li a {
-  color: #fff;
-}
-
-.btn {
-  color: #fff;
+.site-title a {
   display: block;
-  padding: 35px 25px;
-  background-color: #a9a9a9;
-  outline: 1px solid #fff;
-  outline-offset: -7px;
+}
+
+.site-title img {
+  width: 40px;
+}
+
+#nav li {
+  margin-left: 25px;
+}
+
+#header .onlinestore {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 8px;
   position: absolute;
-  bottom: 35px;
-  left: 42px;
+  bottom: 30px;
+  left: 40px;
 }
 
-.btn a {
-  color: #fff;
+#header .onlinestore a {
+  display: block;
+  border: solid 2px #ccc;
+  padding: 30px 18px;
 }
-
-
 
 
 /* main  */
 #news {
-  margin-bottom: 175px;
-}
-
-.container {
-  max-width: 1000px;
-  width: 100%;
-  margin: 0 auto;
+  margin-bottom: 180px;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 #news .section-title {
-  margin-right: 7px;
-  margin-left: 90px;
-}
-
-.section-title .en {
-  font-size: 0.85rem;
   font-weight: normal;
+  line-height: 1;
+  writing-mode: vertical-rl;
+  -webkit-writhing-mode: vertical-rl;
+  -moz-writhing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
 }
 
 #news .section-title .en {
   display: block;
-}
-
-.section-title .ja {
-  font-weight: normal;
-  letter-spacing: 0.2rem;
+  font-size: 0.875rem;
+  margin-left: 15px;
 }
 
 #news .section-title .ja {
   display: block;
-  font-size: 2.275rem;
+  font-size: 2.25rem;
+  letter-spacing: 0.1em;
 }
 
-#news .text-right ul {
-  margin-top: 80px;
+#news .list {
+  padding: 80px 100px 0 0;
+  writing-mode: vertical-rl;
+  -webkit-writhing-mode: vertical-rl;
+  -moz-writhing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
 }
 
-#news .text-right ul li {
+#news .list dt {
   border-right: 1px #000 solid;
+  font-size: 0.75rem;
+  padding: 15px 30px 15px 5px;
 }
 
-#news .text-right ul li:last-child {
-  border-left: 1px #000 solid;
-}
-
-#news .text-right ul li .data-area {
-  padding-top: 15px;
-  padding-right: 28px;
-}
-
-#news .text-right ul li .data-area time {
-  font-size: 0.71rem;
-}
-
-#news .text-right ul li p {
+#news .list dd {
   padding: 15px 0 15px 30px;
 }
 
-
-/* create  */
-
-#create {
-  margin-bottom: 270px;
+#news .list dd:last-child {
+  border-left: solid 1px #000;
 }
 
-#create .text-right .vertical-writhing {
-  position: relative;
+
+/* products1  */
+
+.products {
+  display: flex;
+  margin-bottom: 180px;
 }
 
-#create .text-right .vertical-writhing .section-title {
-  margin-left: 13px;
+.products .section-title {
+  font-weight: normal;
+  line-height: 1;
 }
 
-#create .text-right .vertical-writhing .section-title .ja {
+.products .section-title .ja {
   font-size: 2rem;
-  margin-bottom: 17px;
+  letter-spacing: 0.1em;
+  margin-bottom: 18px;
 }
 
-#create .text-right .vertical-writhing .section-title .en {
+.products .section-title .en {
   font-size: 0.875rem;
 }
 
-
-.img {
-  width: 640px;
-  height: 425px;
-  position: absolute;
+.products .img {
+  width: 65%;
+  margin-top: 100px;
   position: relative;
-  top: 100px;
-  writing-mode: horizontal-tb;
 }
 
-.img img {
-  width: 100%;
-  height: 100%;
-}
-
-#create .img p {
-  display: inline-block;
+.products .text {
+  width: 56%;
   color: #fff;
-  background-color: #ffff00;
-  opacity: 0.7;
-  padding: 50px 115px;
+  padding: 50px 0;
+  text-align: center;
   position: absolute;
-  left: -3%;
-  top: 70%;
+  bottom: -20px;
 }
 
-
-/* science  */
-
-#science .text-right .vertical-writhing .section-title {
-  margin-right: 13px;
+#products1 {
+  flex-direction: row-reverse;
 }
 
-#science .text-right {
-  text-align-last: left;
+#products1 .section-title {
+  margin-left: 20px;
+  writing-mode: vertical-rl;
+  -webkit-writhing-mode: vertical-rl;
+  -moz-writhing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
 }
 
-#science .text-right .vertical-writhing {
-  writing-mode: vertical-lr;
+#products1 .text {
+  background:rgba(249, 233, 6, 0.6);
+  left: -20px;
 }
 
-#science .text-right .vertical-writhing .section-title .ja {
-  font-size: 2rem;
-  margin-bottom: 17px;
+/* products2  */
+
+#products2 .section-title {
+  margin-right: 20px;
+  writing-mode: vertical-rl;
+  -webkit-writhing-mode: vertical-rl;
+  -moz-writhing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
 }
 
-#science .text-right .vertical-writhing .section-title .en {
-  font-size: 0.875rem;
+#products2 .text {
+  background:rgba(149, 42, 38, 0.6);
+  right: -20px;
 }
 
-#science .img p {
-  display: inline-block;
-  color: #fff;
-  background-color: #800000;
-  opacity: 0.6;
-  padding: 50px 115px;
-  position: absolute;
-  right: -3%;
-  top: 70%;
-}
-
-
-/* map  */
-#map iframe {
+/* shop  */
+#shop iframe {
   width: 100%;
   vertical-align: bottom;
 }
@@ -268,185 +213,143 @@ main {
 #footer {
   background-color: #000;
   color: #fff;
-  position: relative;
+  padding: 80px 80px 30px 30px;
 }
 
-#footer .text-right .vertical-writhing {
-  margin-top: 80px;
+#footer .inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  margin-bottom: 10px;
 }
 
-#footer .text-right .vertical-writhing .site-logo {
-  padding: 0;
-  margin-left: 48px;
-  margin-right: 68px;
+#footer .inner .left, #footer .inner .right {
+  writing-mode: vertical-rl;
+  -webkit-writhing-mode: vertical-rl;
+  -moz-writhing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
 }
 
-#footer .text-right .vertical-writhing .info {
-  display: inline-block;
-  margin-left: 35px;
-  font-size: 0.87rem;
+#footer .inner .logo {
+  width: 40px;
+  margin-left: 60px;
+}
+
+#footer .inner .info {
   line-height: 2;
 }
 
-#footer .text-right .vertical-writhing ul li {
-  margin-right: 25px;
-}
-
-#footer .text-right .vertical-writhing ul li a {
-  color: #fff;
+#footer .menu {
   font-size: 1rem;
+  margin-right: 60px;
 }
 
-#footer .vertical-writhing a {
-  color: #fff;
-  display: inline-block;
-  border-bottom: 1px solid #fff;
-  font-size: 0.87rem;
-  padding-bottom: 8px;
-}
-
-#footer .vertical-writhing a:last-child {
-  border-bottom: none;
-}
-
-#footer .contact {
-  position: absolute;
-  top: 80px;
-  left: 28px;
+#footer .menu li {
+  margin-left: 25px;
 }
 
 #footer .copyright {
-  font-size: 0.5rem;
+  font-size: 0.625rem;
   text-align: center;
-  padding: 10px 50px 30px 0;
 }
 
 
 /* レスポンシブ */
 @media screen and (max-width: 768px) {
-  #header .top-img .vertical-writhing {
-    margin: 20px 8px 0 0;
+  #header {
+    background-image: url(https://placehold.jp/640x760.png);
+    padding: 20px;
+    margin-bottom: 80px;
   }
 
-  .btn {
+  #header .onlinestore {
     left: 20px;
     bottom: 20px;
   }
 
-  main {
-    padding: 80px 15px 161px;
-  }
-
   #news {
-    margin-bottom: 75px;
-  }
-
-  #news .section-title {
-    margin-left: 23px;
+    margin-bottom: 80px;
   }
 
   #news .section-title .ja {
     font-size: 1.75rem;
   }
 
-  #news .text-right .vertical-writhing ul {
-    margin-top: 18px;
+  #news .list {
+    padding: 20px 30px 0 0;
   }
 
-  #news .text-right ul li .data-area {
-    padding-right: 10px;
+  #news .list dt {
+    padding: 15px 12px 15px 5px;
   }
 
-  #news .text-right ul li p {
-    padding-left: 11px;
+  #news .list dd {
+    padding: 15px 0 15px 12px;
   }
 
-  #news .text-right ul li:nth-child(3) {
+  #news .list dd:nth-of-type(3) {
     border-left: 1px solid #000;
   }
 
-  #news .text-right ul .sub {
+  #news .list dt:nth-of-type(n + 4) {
     display: none;
   }
 
-
-  #create {
-    margin-bottom: 160px;
+  #news .list dd:nth-of-type(n + 4) {
+    display: none;
   }
 
-  #create .text-right .vertical-writhing .section-title  {
-    margin-left: 5px;
+  .wrapper {
+    min-width: 100%;
   }
 
-  #create .text-right .vertical-writhing .section-title .ja {
+  .products {
+    margin-bottom: 100px;
+  }
+
+  #products1 .section-title {
+    margin-left: 10px;
+  }
+
+  .products .section-title .ja {
     font-size: 1.5rem;
-    letter-spacing: 0.15rem;
   }
 
-  #create .text-right .vertical-writhing .section-title .en {
+  .products .section-title .en {
    display: none;
   }
 
-  .img {
-    top: 70px;
-    width: 655px;
-    height: 440px;
+  .products .img {
+    width: 90%;
+    margin-top: 70px;
   }
 
-  #create .img p {
-    padding: 27px 155px;
-    top: 82%;
-    font-size: 0.9rem;
+  .products .text {
+    padding: 30px 0;
+    width: 64%;
+    font-size: 0.875rem;
   }
 
-  #science .text-right .vertical-writhing .section-title  {
-    margin-right: 5px;
+  #products2 .section-title {
+    margin-right: 10px;
   }
 
-  #science .text-right .vertical-writhing .section-title .ja {
-    font-size: 1.5rem;
-    letter-spacing: 0.15rem;
+
+  #footer {
+    padding: 40px 20px 30px 20px;
   }
 
-  #science .text-right .vertical-writhing .section-title .en {
-   display: none;
+  #footer .inner .logo {
+    margin-left: 25px;
   }
 
-  #science .img p {
-    padding: 27px 155px;
-    top: 82%;
-    font-size: 0.9rem;
-    right: -3%;
+  #footer .menu {
+    font-size: 0.875rem;
+    margin-right: 25px;
   }
 
-  #footer .text-right .vertical-writhing {
-    margin-top: 40px;
-    margin-bottom: 5px;
-  }
-
-  #footer .text-right .vertical-writhing .site-logo {
-    margin-right: 8px;
-    margin-left: 15px;
-  }
-
-  #footer .text-right .vertical-writhing .info {
-    margin-left: 15px;
-  }
-
-  #footer .text-right .vertical-writhing ul li {
-    margin-right: 6px;
-  }
-
-  #footer .text-right .vertical-writhing ul li a {
-    font-size: 0.87rem;
-  }
-
-  #footer .contact {
-    top: 40px;
-    left: 18px;
-  }
-
-  #footer .copyright {
-    padding: 0 0 30px;
+  #footer .menu li {
+    margin-left: 10px;
   }
 }
